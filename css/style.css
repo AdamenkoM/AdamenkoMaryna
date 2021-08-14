@@ -196,3 +196,52 @@ h1, h2, h3 {
     display: flex;
     justify-content: space-around;
 }
+
+/* ================== modal-box */
+.modal {
+   opacity: 0;
+   visibility: hidden;
+   width: 50vw;
+   min-width: 500px;
+   max-width: 800px;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 30;
+   box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2); 
+   text-align: center;
+   padding: 30px;
+   border-radius: 3px;
+   background-color: #fff;
+   transition: 0.3s all;
+}
+
+.modal.active {
+   opacity: 1;
+   visibility: visible;
+}
+
+.modal__cross {
+   width: 15px;
+   height: 15px;
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   fill: #444;
+   cursor: pointer;
+}
+
+.modal__item,
+#btn_send_order {
+    width: 70%;
+    margin: 5px auto;
+}
+.modal__item input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px; 
+    display: block;
+    border: 0.5px solid navy;
+    
+}

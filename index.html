@@ -15,7 +15,7 @@
                 <span class="top-cart-info__item">
                      Товаров в корзине - <span class="red-info" id='total_number'>XXX</span>,
                       на сумму <span class="red-info" id='total_sum'>XXX</span> грн</span>
-                <button class="btn-check">Оформить заказ</button>
+                <button class="btn-check" id="btn_modal_check">Оформить заказ</button>
             </div>
         </div><!-- /.top-cart-info -->
 
@@ -30,6 +30,25 @@
     </header>
 
     <div class="wrap">
+        <div class="modal" id="modal_check">
+            <svg class="modal__cross" id="modal_close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/>
+            </svg>
+            <br>
+            <form id="order_form">
+                <div class="modal__item">
+                    <div>Имя</div>
+                    <input name="name" type="text" id="customer_name" required>
+                </div>
+                <br>
+                <div class="modal__item">
+                    <div>email</div>
+                    <input name="email" type="email" id="customer_email" required>
+                </div>
+                <br>
+                <div class="btn-check" id="btn_send_order">Отправить</div>
+            </form>
+        </div>
         <section class="container">
             <div class="filter-box">
                 <div class="select-box">
